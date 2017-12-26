@@ -14,7 +14,8 @@
   "devDependencies": {},
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.js",
+    "build": "parcel build index.js --public-url ./",
+    "deploy": "npm run build && git subtree push --prefix dist origin gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
