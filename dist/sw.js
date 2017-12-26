@@ -8,14 +8,9 @@ self.addEventListener('install', function(e) {
         caches.open(cacheName).then(function(cache) {
             return cache.addAll([
                 './',
-                './css/style.css',
-                './images/background.jpg',
-                './images/brown_marble.png',
-                './images/green_marble.png',
-                './images/yellow_marble.png',
-                './js/phaser.min.js',
-                './js/main.js',
-                './js/stateMain.js',
+                './cotizador.css',
+                './cotizador.js',
+                './cotizador.css',
                 './index.html'
             ]).then(function() {
                 self.skipWaiting();
