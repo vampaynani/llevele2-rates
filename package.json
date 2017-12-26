@@ -14,7 +14,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.js --public-url ./",
+    "build": "parcel build index.js --public-url https://vampaynani.github.io/llevele2-rates/",
     "deploy": "npm run build && git subtree push --prefix dist origin gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
