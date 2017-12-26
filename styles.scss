@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Slab');
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  color: steelblue;
+}
+
+h1 {
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  flex: 1;
+}
+
+input, select {
+  flex: 1;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  background: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  padding: 1rem;
+  display: block;
+}
+
+.is-selected {
+  background: steelblue;
+  color: white;
+}
