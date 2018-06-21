@@ -15,28 +15,34 @@ export default class Internationals extends Component{
       totalMXN: 0
     }
   }
-  componentDidUpdate(prevProps, prevState){
+  componentDidMount(){
+    this.fetchCurrency();
+  }
+  /*componentDidUpdate(prevProps, prevState){
     if(prevState.totalUSD !== this.state.totalUSD){
       this.fetchCurrency();
     }
-  }
+  }*/
   updateAmount(e){
-    const amount = parseFloat(e.currentTarget.value);
+    const amount = e.currentTarget.value !== '' ? parseFloat(e.currentTarget.value):0;
     const taxes = this.getTaxes(amount);
     const delivery = this.getDeliveryCost(this.state.size);
     const totalUSD = (amount + taxes) * (1 + this.state.profit) + delivery;
-    this.setState({amount, taxes, delivery, totalUSD});
+    const totalMXN = (Math.ceil(totalUSD * this.state.exchange / 10) * 10).toFixed(2);
+    this.setState({amount, taxes, delivery, totalUSD, totalMXN});
   }
   updateProfit(e){
     const profit = parseFloat(e.currentTarget.value);
     const totalUSD = (this.state.amount + this.state.taxes) * (1 + profit) + this.state.delivery;
-    this.setState({profit, totalUSD});
+    const totalMXN = (Math.ceil(totalUSD * this.state.exchange / 10) * 10).toFixed(2);
+    this.setState({profit, totalUSD, totalMXN});
   }
   updateSize(e){
     const size = parseFloat(e.currentTarget.value);
     const delivery = this.getDeliveryCost(size);
     const totalUSD = (this.state.amount + this.state.taxes) * (1 + this.state.profit) + delivery;
-    this.setState({size, delivery, totalUSD});
+    const totalMXN = (Math.ceil(totalUSD * this.state.exchange / 10) * 10).toFixed(2);
+    this.setState({size, delivery, totalUSD, totalMXN});
   }
   getDeliveryCost(size){
     const cost = 9.5;
@@ -54,13 +60,13 @@ export default class Internationals extends Component{
     return taxes;
   }
   fetchCurrency(){
-    fetch('https://api.fixer.io/latest?base=USD&symbols=MXN')
+    //fetch('https://api.fixer.io/latest?base=USD&symbols=MXN&access_key=f2bf9edce63c50a5600324891e362839')
+    fetch('http://free.currencyconverterapi.com/api/v5/convert?q=USD_MXN&compact=y')
     .then(response => response.json())
-    .then(data => data.rates)
+    .then(data => data['USD_MXN'])
     .then(rates => {
       this.setState({
-        exchange: rates['MXN'],
-        totalMXN: (Math.ceil(this.state.totalUSD * rates['MXN'] / 10) * 10).toFixed(2)
+        exchange: rates.val
       })
     })
   }
@@ -83,6 +89,8 @@ export default class Internationals extends Component{
               <option value="0.6">6" (15cm)</option>
               <option value="0.9">8" (20cm)</option>
               <option value="1.2">10" (25cm)</option>
+              <option value="1.2">15" (37.5cm)</option>
+              <option value="1.5">20" (50cm)</option>
             </select>
           </p>
           <p>
@@ -100,8 +108,9 @@ export default class Internationals extends Component{
             </select>
           </p>
         </form>
-        <p>Total $USD {this.state.totalUSD}</p>
-        <p>Total $MXN {this.state.totalMXN}</p>
+        <p>Total $USD {this.state.amount > 0 ? this.state.totalUSD.toFixed(2) : 0}</p>
+        <p>Subtotal $MXN {this.state.amount > 0 ? ((this.state.amount + this.state.taxes + this.getDeliveryCost(this.state.size)) * this.state.exchange).toFixed(2) : 0}</p>
+        <p>Total $MXN {this.state.amount > 0 ? this.state.totalMXN : 0}</p>
         <p>Ganancia $MXN {(this.state.amount * this.state.profit * this.state.exchange).toFixed(2)}</p>
       </section>
     );

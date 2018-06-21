@@ -11,7 +11,7 @@ export default class Nationals extends Component{
     }
   }
   updateAmount(e){
-    const amount = parseFloat(e.currentTarget.value);
+    const amount = e.currentTarget.value !== '' ? parseFloat(e.currentTarget.value):0;
     const totalMXN = amount * (1 + this.state.profit);
     this.setState({amount, totalMXN});
   }
