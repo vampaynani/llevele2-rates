@@ -15,7 +15,7 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "NODE_ENV=production parcel build index.html --public-url ./ --no-minify",
-    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "deploy": "git subtree push --force --prefix dist origin gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
