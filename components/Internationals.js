@@ -61,7 +61,7 @@ export default class Internationals extends Component{
   }
   fetchCurrency(){
     //fetch('https://api.fixer.io/latest?base=USD&symbols=MXN&access_key=f2bf9edce63c50a5600324891e362839')
-    fetch('http://free.currencyconverterapi.com/api/v5/convert?q=USD_MXN&compact=y')
+    fetch('https://free.currencyconverterapi.com/api/v5/convert?q=USD_MXN&compact=y')
     .then(response => response.json())
     .then(data => data['USD_MXN'])
     .then(rates => {
