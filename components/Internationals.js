@@ -7,9 +7,9 @@ export default class Internationals extends Component{
     this.state = {
       amount: '',
       taxes: '',
-      size: 0.3,
+      size: 0.6,
       delivery: 0,
-      profit: 0.2,
+      profit: 0.25,
       exchange: 0,
       totalUSD: 0,
       totalMXN: 0
@@ -85,12 +85,13 @@ export default class Internationals extends Component{
           <p>
             <label>Tamaño</label>
             <select value={this.state.size} onChange={e => this.updateSize(e)}>
-              <option value="0.3">4" (10cm)</option>
-              <option value="0.6">6" (15cm)</option>
-              <option value="0.9">8" (20cm)</option>
-              <option value="1.2">10" (25cm)</option>
-              <option value="1.2">15" (37.5cm)</option>
-              <option value="1.5">20" (50cm)</option>
+              {/*<option value="0.3">4" (10cm)</option>*/}
+              <option value="0.6">9cm x 12cm x 16cm (3.5" x 4.5" x 6.25")</option>
+              <option value="0.9">14cm x 18cm x 23cm (5.5" x 7" x 9")</option>
+              <option value="1.2">16cm x 20cm x 25cm (6" x 7.5" x 9.5")</option>
+              <option value="1.5">18cm x 22cm x 25cm (7" x 8.5" x 9.5")</option>
+              <option value="1.8">20cm x 22cm x 25cm (7.5" x 8.5" x 9.5")</option>
+              <option value="2.1">20cm x 25cm x 30cm (7.5" x 9.5" x 11.5")</option>
             </select>
           </p>
           <p>
