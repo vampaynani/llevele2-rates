@@ -162,7 +162,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	return to;
 };
 
-},{}],23:[function(require,module,exports) {
+},{}],21:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -240,7 +240,7 @@ var U={Children:{map:function(a,b,e){if(null==a)return a;var c=[];T(a,c,null,b,e
 d=a.key,g=a.ref,k=a._owner;if(null!=b){void 0!==b.ref&&(g=b.ref,k=G.current);void 0!==b.key&&(d=""+b.key);if(a.type&&a.type.defaultProps)var f=a.type.defaultProps;for(h in b)H.call(b,h)&&!I.hasOwnProperty(h)&&(c[h]=void 0===b[h]&&void 0!==f?f[h]:b[h])}var h=arguments.length-2;if(1===h)c.children=e;else if(1<h){f=Array(h);for(var l=0;l<h;l++)f[l]=arguments[l+2];c.children=f}return{$$typeof:r,type:a.type,key:d,ref:g,props:c,_owner:k}},createFactory:function(a){var b=J.bind(null,a);b.type=a;return b},
 isValidElement:K,version:"16.2.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{ReactCurrentOwner:G,assign:m}},V=Object.freeze({default:U}),W=V&&U||V;module.exports=W["default"]?W["default"]:W;
 
-},{"object-assign":14,"fbjs/lib/emptyObject":23,"fbjs/lib/emptyFunction":19}],25:[function(require,module,exports) {
+},{"object-assign":14,"fbjs/lib/emptyObject":21,"fbjs/lib/emptyFunction":19}],25:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1783,7 +1783,7 @@ if ("production" !== "production") {
     module.exports = react;
   })();
 }
-},{"object-assign":14,"fbjs/lib/emptyObject":23,"fbjs/lib/invariant":25,"fbjs/lib/warning":26,"fbjs/lib/emptyFunction":19,"prop-types/checkPropTypes":15}],8:[function(require,module,exports) {
+},{"object-assign":14,"fbjs/lib/emptyObject":21,"fbjs/lib/invariant":25,"fbjs/lib/warning":26,"fbjs/lib/emptyFunction":19,"prop-types/checkPropTypes":15}],8:[function(require,module,exports) {
 'use strict';
 
 if ("production" === 'production') {
@@ -1791,7 +1791,7 @@ if ("production" === 'production') {
 } else {
   module.exports = require('./cjs/react.development.js');
 }
-},{"./cjs/react.production.min.js":12,"./cjs/react.development.js":13}],17:[function(require,module,exports) {
+},{"./cjs/react.production.min.js":12,"./cjs/react.development.js":13}],18:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1825,7 +1825,7 @@ var ExecutionEnvironment = {
 };
 
 module.exports = ExecutionEnvironment;
-},{}],18:[function(require,module,exports) {
+},{}],24:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -1900,7 +1900,7 @@ var EventListener = {
 };
 
 module.exports = EventListener;
-},{"./emptyFunction":19}],20:[function(require,module,exports) {
+},{"./emptyFunction":19}],22:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -1937,7 +1937,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 }
 
 module.exports = getActiveElement;
-},{}],21:[function(require,module,exports) {
+},{}],20:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -2049,7 +2049,7 @@ function isTextNode(object) {
 }
 
 module.exports = isTextNode;
-},{"./isNode":32}],22:[function(require,module,exports) {
+},{"./isNode":32}],23:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2087,7 +2087,7 @@ function containsNode(outerNode, innerNode) {
 }
 
 module.exports = containsNode;
-},{"./isTextNode":29}],24:[function(require,module,exports) {
+},{"./isTextNode":29}],17:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -2343,7 +2343,7 @@ var Sg={createPortal:Qg,findDOMNode:function(a){if(null==a)return null;if(1===a.
 E("40");return a._reactRootContainer?(Z.unbatchedUpdates(function(){Pg(null,null,a,!1,function(){a._reactRootContainer=null})}),!0):!1},unstable_createPortal:Qg,unstable_batchedUpdates:tc,unstable_deferredUpdates:Z.deferredUpdates,flushSync:Z.flushSync,__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{EventPluginHub:mb,EventPluginRegistry:Va,EventPropagators:Cb,ReactControlledComponent:qc,ReactDOMComponentTree:sb,ReactDOMEventListener:xd}};
 Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",rendererPackageName:"react-dom"});var Tg=Object.freeze({default:Sg}),Ug=Tg&&Sg||Tg;module.exports=Ug["default"]?Ug["default"]:Ug;
 
-},{"react":8,"fbjs/lib/ExecutionEnvironment":17,"object-assign":14,"fbjs/lib/emptyFunction":19,"fbjs/lib/EventListener":18,"fbjs/lib/getActiveElement":20,"fbjs/lib/shallowEqual":21,"fbjs/lib/containsNode":22,"fbjs/lib/focusNode":24,"fbjs/lib/emptyObject":23}],30:[function(require,module,exports) {
+},{"react":8,"fbjs/lib/ExecutionEnvironment":18,"object-assign":14,"fbjs/lib/emptyFunction":19,"fbjs/lib/EventListener":24,"fbjs/lib/getActiveElement":22,"fbjs/lib/shallowEqual":20,"fbjs/lib/containsNode":23,"fbjs/lib/focusNode":17,"fbjs/lib/emptyObject":21}],30:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -17837,7 +17837,7 @@ if ("production" !== "production") {
     module.exports = reactDom;
   })();
 }
-},{"react":8,"fbjs/lib/invariant":25,"fbjs/lib/warning":26,"fbjs/lib/ExecutionEnvironment":17,"object-assign":14,"fbjs/lib/emptyFunction":19,"fbjs/lib/EventListener":18,"fbjs/lib/getActiveElement":20,"fbjs/lib/shallowEqual":21,"fbjs/lib/containsNode":22,"fbjs/lib/focusNode":24,"fbjs/lib/emptyObject":23,"prop-types/checkPropTypes":15,"fbjs/lib/hyphenateStyleName":27,"fbjs/lib/camelizeStyleName":28}],9:[function(require,module,exports) {
+},{"react":8,"fbjs/lib/invariant":25,"fbjs/lib/warning":26,"fbjs/lib/ExecutionEnvironment":18,"object-assign":14,"fbjs/lib/emptyFunction":19,"fbjs/lib/EventListener":24,"fbjs/lib/getActiveElement":22,"fbjs/lib/shallowEqual":20,"fbjs/lib/containsNode":23,"fbjs/lib/focusNode":17,"fbjs/lib/emptyObject":21,"prop-types/checkPropTypes":15,"fbjs/lib/hyphenateStyleName":27,"fbjs/lib/camelizeStyleName":28}],9:[function(require,module,exports) {
 'use strict';
 
 function checkDCE() {
@@ -18048,9 +18048,9 @@ var Internationals = function (_Component) {
     _this.state = {
       amount: '',
       taxes: '',
-      size: 0.3,
+      size: 0.6,
       delivery: 0,
-      profit: 0.2,
+      profit: 0.25,
       exchange: 0,
       totalUSD: 0,
       totalMXN: 0
@@ -18121,7 +18121,7 @@ var Internationals = function (_Component) {
       var _this2 = this;
 
       //fetch('https://api.fixer.io/latest?base=USD&symbols=MXN&access_key=f2bf9edce63c50a5600324891e362839')
-      fetch('http://free.currencyconverterapi.com/api/v5/convert?q=USD_MXN&compact=y').then(function (response) {
+      fetch('https://free.currencyconverterapi.com/api/v5/convert?q=USD_MXN&compact=y').then(function (response) {
         return response.json();
       }).then(function (data) {
         return data['USD_MXN'];
@@ -18179,33 +18179,33 @@ var Internationals = function (_Component) {
                 } },
               _react2.default.createElement(
                 "option",
-                { value: "0.3" },
-                "4\" (10cm)"
-              ),
-              _react2.default.createElement(
-                "option",
                 { value: "0.6" },
-                "6\" (15cm)"
+                "9cm x 12cm x 16cm (3.5\" x 4.5\" x 6.25\")"
               ),
               _react2.default.createElement(
                 "option",
                 { value: "0.9" },
-                "8\" (20cm)"
+                "14cm x 18cm x 23cm (5.5\" x 7\" x 9\")"
               ),
               _react2.default.createElement(
                 "option",
                 { value: "1.2" },
-                "10\" (25cm)"
-              ),
-              _react2.default.createElement(
-                "option",
-                { value: "1.2" },
-                "15\" (37.5cm)"
+                "16cm x 20cm x 25cm (6\" x 7.5\" x 9.5\")"
               ),
               _react2.default.createElement(
                 "option",
                 { value: "1.5" },
-                "20\" (50cm)"
+                "18cm x 22cm x 25cm (7\" x 8.5\" x 9.5\")"
+              ),
+              _react2.default.createElement(
+                "option",
+                { value: "1.8" },
+                "20cm x 22cm x 25cm (7.5\" x 8.5\" x 9.5\")"
+              ),
+              _react2.default.createElement(
+                "option",
+                { value: "2.1" },
+                "20cm x 25cm x 30cm (7.5\" x 9.5\" x 11.5\")"
               )
             )
           ),
@@ -18388,7 +18388,7 @@ var App = function (_Component) {
 }(_react.Component);
 
 exports.default = App;
-},{"react":8,"react-dom":9,"./Nationals":6,"./Internationals":7}],3:[function(require,module,exports) {
+},{"react":8,"react-dom":9,"./Nationals":6,"./Internationals":7}],2:[function(require,module,exports) {
 "use strict";
 
 require("./styles.scss");
@@ -18416,4 +18416,4 @@ if ('serviceWorker' in navigator) {
 }
 
 _reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('root'));
-},{"./styles.scss":4,"react":8,"react-dom":9,"./components/App":5}]},{},[3])
+},{"./styles.scss":4,"react":8,"react-dom":9,"./components/App":5}]},{},[2])

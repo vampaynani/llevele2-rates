@@ -68,7 +68,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({2:[function(require,module,exports) {
+})({3:[function(require,module,exports) {
 module.exports = {
     "short_name": "Llevele",
     "name": "Cotizador Llevele",
@@ -106,4 +106,4 @@ module.exports = {
     "theme_color": "#4682B4",
     "background_color": "#4682B4"
 };
-},{}]},{},[2])
+},{}]},{},[3])
