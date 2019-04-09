@@ -217,7 +217,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
-},{}],12:[function(require,module,exports) {
+},{}],11:[function(require,module,exports) {
 /** @license React v16.2.0
  * react.production.min.js
  *
@@ -1791,7 +1791,7 @@ if ("production" === 'production') {
 } else {
   module.exports = require('./cjs/react.development.js');
 }
-},{"./cjs/react.production.min.js":12,"./cjs/react.development.js":10}],21:[function(require,module,exports) {
+},{"./cjs/react.production.min.js":11,"./cjs/react.development.js":10}],21:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1825,7 +1825,7 @@ var ExecutionEnvironment = {
 };
 
 module.exports = ExecutionEnvironment;
-},{}],22:[function(require,module,exports) {
+},{}],26:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -1937,7 +1937,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 }
 
 module.exports = getActiveElement;
-},{}],26:[function(require,module,exports) {
+},{}],22:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -2049,7 +2049,7 @@ function isTextNode(object) {
 }
 
 module.exports = isTextNode;
-},{"./isNode":28}],25:[function(require,module,exports) {
+},{"./isNode":28}],23:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2087,7 +2087,7 @@ function containsNode(outerNode, innerNode) {
 }
 
 module.exports = containsNode;
-},{"./isTextNode":27}],23:[function(require,module,exports) {
+},{"./isTextNode":27}],25:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -2112,7 +2112,7 @@ function focusNode(node) {
 }
 
 module.exports = focusNode;
-},{}],11:[function(require,module,exports) {
+},{}],12:[function(require,module,exports) {
 /** @license React v16.2.0
  * react-dom.production.min.js
  *
@@ -2343,7 +2343,7 @@ var Sg={createPortal:Qg,findDOMNode:function(a){if(null==a)return null;if(1===a.
 E("40");return a._reactRootContainer?(Z.unbatchedUpdates(function(){Pg(null,null,a,!1,function(){a._reactRootContainer=null})}),!0):!1},unstable_createPortal:Qg,unstable_batchedUpdates:tc,unstable_deferredUpdates:Z.deferredUpdates,flushSync:Z.flushSync,__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{EventPluginHub:mb,EventPluginRegistry:Va,EventPropagators:Cb,ReactControlledComponent:qc,ReactDOMComponentTree:sb,ReactDOMEventListener:xd}};
 Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",rendererPackageName:"react-dom"});var Tg=Object.freeze({default:Sg}),Ug=Tg&&Sg||Tg;module.exports=Ug["default"]?Ug["default"]:Ug;
 
-},{"react":6,"fbjs/lib/ExecutionEnvironment":21,"object-assign":14,"fbjs/lib/emptyFunction":18,"fbjs/lib/EventListener":22,"fbjs/lib/getActiveElement":24,"fbjs/lib/shallowEqual":26,"fbjs/lib/containsNode":25,"fbjs/lib/focusNode":23,"fbjs/lib/emptyObject":17}],32:[function(require,module,exports) {
+},{"react":6,"fbjs/lib/ExecutionEnvironment":21,"object-assign":14,"fbjs/lib/emptyFunction":18,"fbjs/lib/EventListener":26,"fbjs/lib/getActiveElement":24,"fbjs/lib/shallowEqual":22,"fbjs/lib/containsNode":23,"fbjs/lib/focusNode":25,"fbjs/lib/emptyObject":17}],32:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -17837,7 +17837,7 @@ if ("production" !== "production") {
     module.exports = reactDom;
   })();
 }
-},{"react":6,"fbjs/lib/invariant":20,"fbjs/lib/warning":19,"fbjs/lib/ExecutionEnvironment":21,"object-assign":14,"fbjs/lib/emptyFunction":18,"fbjs/lib/EventListener":22,"fbjs/lib/getActiveElement":24,"fbjs/lib/shallowEqual":26,"fbjs/lib/containsNode":25,"fbjs/lib/focusNode":23,"fbjs/lib/emptyObject":17,"prop-types/checkPropTypes":15,"fbjs/lib/hyphenateStyleName":30,"fbjs/lib/camelizeStyleName":29}],7:[function(require,module,exports) {
+},{"react":6,"fbjs/lib/invariant":20,"fbjs/lib/warning":19,"fbjs/lib/ExecutionEnvironment":21,"object-assign":14,"fbjs/lib/emptyFunction":18,"fbjs/lib/EventListener":26,"fbjs/lib/getActiveElement":24,"fbjs/lib/shallowEqual":22,"fbjs/lib/containsNode":23,"fbjs/lib/focusNode":25,"fbjs/lib/emptyObject":17,"prop-types/checkPropTypes":15,"fbjs/lib/hyphenateStyleName":30,"fbjs/lib/camelizeStyleName":29}],7:[function(require,module,exports) {
 'use strict';
 
 function checkDCE() {
@@ -17873,7 +17873,7 @@ if ("production" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.production.min.js":11,"./cjs/react-dom.development.js":13}],9:[function(require,module,exports) {
+},{"./cjs/react-dom.production.min.js":12,"./cjs/react-dom.development.js":13}],9:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -18127,7 +18127,7 @@ var Internationals = function (_Component) {
         return data['USD_MXN'];
       }).then(function (rates) {
         _this2.setState({
-          exchange: rates.val
+          exchange: rates
         });
       });
     }
